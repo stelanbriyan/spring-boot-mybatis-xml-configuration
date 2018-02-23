@@ -1,0 +1,15 @@
+# spring-boot-my-batis-configuration
+server:
+  port: 8081
+
+spring:
+  application:
+    name: spring-boot-my-batis-configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/grand
+    username: root
+    password: admin
+
+mybatis:
+  typeAliasesPackage: org.incosyz.config.entity
+  mapperLocations: classpath:mappers/*.xml

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.incosyz.config.mappers.UserMapper">
+    <insert id="saveUser" parameterType="java.util.Map">
+        INSERT INTO USER(ID, USERNAME, FULL_NAME) VALUES (#{id},#{username},#{fullname});
+    </insert>
+
+    <resultMap id="userMap" type="org.incosyz.config.entity.User">
+
+        <result column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="USERNAME" jdbcType="VARCHAR" property="username"/>
+        <result column="FULL_NAME" jdbcType="VARCHAR" property="fullname"/>
+
+    </resultMap>
+    <select id="findUsers" resultMap="userMap">
+
+        SELECT * FROM USER;
+
+    </select>
+</mapper>
