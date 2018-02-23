@@ -12,13 +12,9 @@ DOC - ## http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconf
 
 ```
 		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-typehandlers-jsr310</artifactId>
-			<version>${mybatis.jsr310.version}</version>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis.sprin.boot.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.mybatis.caches</groupId>
-			<artifactId>mybatis-hazelcast</artifactId>
-			<version>${mybatis.hazelcast.version}</version>
-		</dependency>
+
 ```
